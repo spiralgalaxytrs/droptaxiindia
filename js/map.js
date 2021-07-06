@@ -55,11 +55,11 @@ function calcRoute() {
             psuvr=2*((n*16)+550);
             traveller=(2*((n*18)+550));
             
-                var strText8 = document.getElementById("One-Way").value;
+                var strText8 = "One-Wa";
                 var oneway = document.getElementById("oneway");
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
-                oneway.style.display = "block";
+                oneway.style.display = "none";
                      $(".Dist").html(n);
                      $("#1").html(psedano);
                      $("#3").html(psuvo);    
@@ -67,7 +67,7 @@ function calcRoute() {
                      $("#7").html(suvo);    
             }
             else{
-                twoway.style.display = "block";
+                twoway.style.display = "none";
                 $(".Dist").html(2*n);
                 $("#2").html(psedanr);
                 $("#4").html(psuvr);
