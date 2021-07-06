@@ -63,7 +63,7 @@ function calcRoute() {
                      $(".Dist").html(n);
                      $("#1").html(psedano);
                      $("#3").html(psuvo);    
-                     $("#1").html(sedano);     
+                     $("#5").html(sedano);     
                      $("#7").html(suvo);    
             }
             else{
@@ -72,7 +72,7 @@ function calcRoute() {
                 $("#2").html(psedanr);
                 $("#4").html(psuvr);
                 $("#6").html(suvr);
-                $("#2").html(sedanr);
+                $("#8").html(sedanr);
                 $("#9").html(traveller);
             }
         
