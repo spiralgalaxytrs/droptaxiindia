@@ -7,7 +7,7 @@ var mapOptions = {
 
 // Hide result box
 //document.getElementById("output").style.display = "none";
-document.getElementById("output1").style.display = "block";
+//document.getElementById("output1").style.display = "block";
 // Create/Init map
 var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
 
