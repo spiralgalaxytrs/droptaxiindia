@@ -55,7 +55,7 @@ function calcRoute() {
             psuvr=2*((n*16)+550);
             traveller=(2*((n*18)+550));
             
-                var strText8 = document.getElementById("ser").value;
+                var strText8 = document.getElementById("One-Way").value;
                 var oneway = document.getElementById("oneway");
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
