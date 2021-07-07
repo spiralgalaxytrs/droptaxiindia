@@ -55,11 +55,14 @@ function calcRoute() {
             psuvr=2*((n*16)+550);
             traveller=(2*((n*18)+550));
             
-                var strText8 = "One-Wa";
-                var oneway = document.getElementById("oneway");
+            
+               var strText8 = document.getElementById("ser").value;
+               // strText8="One-Way";
+               var oneway = document.getElementById("oneway");
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
-                oneway.style.display = "none";
+                twoway.style.display = "none";
+                oneway.style.display = "block";
                      $(".Dist").html(n);
                      $("#1").html(psedano);
                      $("#3").html(psuvo);    
@@ -67,7 +70,8 @@ function calcRoute() {
                      $("#7").html(suvo);    
             }
             else{
-                twoway.style.display = "none";
+               twoway.style.display = "block";
+               oneway.style.display = "none";
                 $(".Dist").html(2*n);
                 $("#2").html(psedanr);
                 $("#4").html(psuvr);
@@ -77,7 +81,7 @@ function calcRoute() {
             }
         
            
-          //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
+ /*         //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
            // $("#output1").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +sedano+"</span><br /><span> Round Way : ₹" +sedanr+"</span></div>");
             document.getElementById("output1").style.display = "block";
@@ -88,7 +92,7 @@ function calcRoute() {
             //display route <span> Price  :  ₹13 / Km.</span>
             directionsDisplay.setDirections(result);
             
-
+*/
 
 
         } else {
