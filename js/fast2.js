@@ -60,7 +60,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
         {
             const request = new XMLHttpRequest();
         const url = 'https://api.telegram.org/bot1721938726:AAEqc3VUsUo88GIeAcrWvhRhFVvpmU1aJSE/sendMessage?chat_id=-518646833&text=' + result;
-     request.open("post", url);
+     request.open("get", url);
     request.send();
     console.log("Sent Telegram successfully");
     fetch("https://www.fast2sms.com/dev/bulkV2?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&route=dlt&sender_id=SMSTRS&message=126247&variables_values=%20" + strText + "%20%7C%20" + Clink + "%20%7C%20" + CID + "%20%7C%20" + strText + "%20%7C%20" + strText1 + "%20%20%7C%20" + strText2 + "%20%7C%20" + strText3 + "%20%20%7C%20" + strText4 + "%20%20%20" + strText6 + "%20%20%7C%20" + strText7 + "%20%20%20%20" + strText8 + "%20%20%7C%20" + n + "%20%7C" + rate + "%7C" + 15 + "%7C" + 450 + "%7C%20" + CPh + "%20" + "%20%7C&flash=0&numbers=" + strText1)
