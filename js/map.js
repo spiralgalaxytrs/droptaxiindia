@@ -86,7 +86,8 @@ function calcRoute() {
             else{
                 twoway.style.display = "block";
                 oneway.style.display = "none";
-                $(".Dist").html(2*n);
+                n=n*2;
+                $(".Dist").html(n);
                 $("#2").html(psedanr);
                 $("#4").html(psuvr);
                 $("#6").html(suvr);
