@@ -41,6 +41,7 @@ function book() {
     console.log("book",strText8);
     var result;
     if(strText8=="One-Way"){
+        console.log("result set in one way");
         result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
     }else{
         result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
@@ -71,7 +72,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
                 localStorage.setItem("result2", strText3);
                 localStorage.setItem("result3", strText7);
                 localStorage.setItem("result4", strText8);
-                window.location.href = "bookingSuccess.html";
+                // window.location.href = "bookingSuccess.html";
             }
         })                
         }
