@@ -57,10 +57,12 @@ function calcRoute() {
             
             
                var strText8 = document.getElementById("ser").value;
+               var returndate = document.getElementById("returndate");
                // strText8="One-Way";
                var oneway = document.getElementById("oneway");
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
+                returndate.style.display = "none";
                 twoway.style.display = "none";
                 oneway.style.display = "block";
                      $(".Dist").html(n);
