@@ -43,7 +43,7 @@ function book() {
     console.log("read successful");
     console.log("book",strText8);
     var result;
-    var carTypemsg = strText7[0]=='P'?strText7.replace('P',"Prime ")
+    var carTypemsg = strText7[0]=='P'?strText7.replace('P',"Prime ");
     if(strText8=="One-Way"){
         console.log("result set in one way");
         result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + carTypemsg+"%0APrice:"+rate+"%0ATotalKms: "+n;
