@@ -61,6 +61,7 @@ function calcRoute() {
                nElement.style.display = "none";
                nElement.type = "text";
                nElement.value = `${n}`;
+               oneway.appendChild(nElement);
                console.log(nElement,nElement.value);
                var strText8 = document.getElementById("ser").value;
                var returndate = document.getElementById("returndate");
@@ -87,7 +88,7 @@ function calcRoute() {
                 $("#8").html(sedanr);
                 $("#9").html(traveller);
                 returndate.style.display = "block";
-                document.getElementById("edName").attributes.required = "required"; 
+                returndate.attributes.required = "required"; 
             }
         
            
