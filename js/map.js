@@ -56,6 +56,12 @@ function calcRoute() {
             traveller=(2*((n*18)+500));
             
             
+               var nElement = document.createElement("input");
+               nElement.id = "nElement";
+               nElement.style.display = "none";
+               nElement.type = "text";
+               nElement.value = `${n}`;
+               console.log(nElement,nElement.value);
                var strText8 = document.getElementById("ser").value;
                var returndate = document.getElementById("returndate");
                // strText8="One-Way";
