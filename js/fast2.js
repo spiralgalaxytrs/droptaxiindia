@@ -58,7 +58,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
      request.open("post", url);
     request.send();
         console.log("Sent Telegram successfully");
-    fetch("https://www.fast2sms.com/dev/bulkV2?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&route=dlt&sender_id=SMSTRS&message=126247&variables_values=%20" + strText + "%20%7C%22" + Clink + "%22%7C%22" + CID + "%22%7C%22" + strText + "%22%7C%22" + strText1 + "%20+%22%7C%22" + strText2 + "%22%7C%22" + strText3 + "%20%22%7C%22" + strText4 + "%22%20%22" + strText6 + "%20%22%7C%22" + strText7 + "%20%22%20%22" + strText8 + "%20%22%7C%22" + rate + "%22%7C" + 1024 + "%7C" + 15 + "%7C" + 450 + "%7C%22" + CPh + "%20" + "%22%7C&flash=0&numbers=" + strText1)
+    fetch("https://www.fast2sms.com/dev/bulkV2?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&route=dlt&sender_id=SMSTRS&message=126247&variables_values=%20" + strText + "%20%7C%20" + Clink + "%20%7C%20" + CID + "%20%7C%20" + strText + "%20%7C%20" + strText1 + "%20+%20%7C%20" + strText2 + "%20%7C%20" + strText3 + "%20%20%7C%20" + strText4 + "%20%20%20" + strText6 + "%20%20%7C%20" + strText7 + "%20%20%20%20" + strText8 + "%20%20%7C%20" + rate + "%20%7C" + 1024 + "%7C" + 15 + "%7C" + 450 + "%7C%20" + CPh + "%20" + "%22%7C&flash=0&numbers=" + strText1)
     .then(response=>{
            
             if(response.status==200)
