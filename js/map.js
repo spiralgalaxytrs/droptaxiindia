@@ -61,12 +61,12 @@ function calcRoute() {
                nElement.style.display = "none";
                nElement.type = "text";
                nElement.value = `${n}`;
-               oneway.appendChild(nElement);
                console.log(nElement,nElement.value);
                var strText8 = document.getElementById("ser").value;
                var returndate = document.getElementById("returndate");
                // strText8="One-Way";
                var oneway = document.getElementById("oneway");
+               oneway.appendChild(nElement);
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
                 twoway.style.display = "none";
