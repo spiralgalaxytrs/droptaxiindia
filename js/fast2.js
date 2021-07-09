@@ -48,7 +48,7 @@ function book() {
         console.log("result set in one way");
         result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + carTypemsg+"%0APrice:"+rate+"%0ATotalKms: "+n;
     }else{
-        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
+        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate+"%0ATotalKms: "+n;
     }
     console.log(result);
     document.getElementById("bookingForm").addEventListener("submit", (e) => {
@@ -76,7 +76,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
                 localStorage.setItem("result3", strText7);
                 localStorage.setItem("result4", strText8);
                 localStorage.setItem("fare", rate);
-                // window.location.href = "bookingSuccess.html";
+                window.location.href = "bookingSuccess.html";
             }
         })                
         }
