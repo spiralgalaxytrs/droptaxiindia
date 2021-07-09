@@ -2,6 +2,9 @@ var sedano;
 var sedanr;
 var suvo; 
 var suvr;
+var psuvo;
+var psuvr;
+var traveller;
 
 function book() {
     var CID =Math.floor((Math.random()*1000000)+1);
@@ -40,11 +43,12 @@ function book() {
     console.log("read successful");
     console.log("book",strText8);
     var result;
+    var carTypemsg = strText7[0]=='P'?strText7.replace('P',"Prime "):strText7;
     if(strText8=="One-Way"){
         console.log("result set in one way");
-        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
+        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + carTypemsg+"%0APrice:"+rate+"%0ATotalKms: "+n;
     }else{
-        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
+        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate+"%0ATotalKms: "+n*2;
     }
     console.log(result);
     document.getElementById("bookingForm").addEventListener("submit", (e) => {
@@ -59,8 +63,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
      request.open("post", url);
     request.send();
     console.log("Sent Telegram successfully");
-    var n = document.getElementById("nElement").value;
-    fetch("https://www.fast2sms.com/dev/bulkV2?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&route=dlt&sender_id=SMSTRS&message=126247&variables_values=%20" + strText + "%20%7C%20" + Clink + "%20%7C%20" + CID + "%20%7C%20" + strText + "%20%7C%20" + strText1 + "%20%20%7C%20" + strText2 + "%20%7C%20" + strText3 + "%20%20%7C%20" + strText4 + "%20%20%20" + strText6 + "%20%20%7C%20" + strText7 + "%20%20%20%20" + strText8 + "%20%20%7C%20" + rate + "%20%7C" + n + "%7C" + 15 + "%7C" + 450 + "%7C%20" + CPh + "%20" + "%20%7C&flash=0&numbers=" + strText1)
+    fetch("https://www.fast2sms.com/dev/bulkV2?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&route=dlt&sender_id=SMSTRS&message=126247&variables_values=%20" + strText + "%20%7C%20" + Clink + "%20%7C%20" + CID + "%20%7C%20" + strText + "%20%7C%20" + strText1 + "%20%20%7C%20" + strText2 + "%20%7C%20" + strText3 + "%20%20%7C%20" + strText4 + "%20%20%20" + strText6 + "%20%20%7C%20" + strText7 + "%20%20%20%20" + strText8 + "%20%20%7C%20" + n + "%20%7C" + rate + "%7C" + 15 + "%7C" + 450 + "%7C%20" + CPh + "%20" + "%20%7C&flash=0&numbers=" + strText1)
     .then(response=>{
            
             if(response.status==200)
@@ -70,8 +73,9 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
                 localStorage.setItem("result", strText);
                 localStorage.setItem("result1", strText2);
                 localStorage.setItem("result2", strText3);
-                localStorage.setItem("result3", strText7);
-                localStorage.setItem("result4", strText8);
+                localStorage.setItem("carType", carTypemsg);
+                localStorage.setItem("tripType", strText8);
+                localStorage.setItem("fare", rate);
                 window.location.href = "bookingSuccess.html";
             }
         })                

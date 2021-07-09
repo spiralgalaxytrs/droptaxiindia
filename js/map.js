@@ -23,6 +23,10 @@ var sedano;
 var sedanr;
 var suvo; 
 var suvr;
+var n;
+var psuvo;
+var psuvr;
+var traveller;
 
 // Define calcRoute function
 function calcRoute() {
@@ -44,7 +48,7 @@ function calcRoute() {
 
             //Get distance and time            
             var d=result.routes[0].legs[0].distance.value/1000;
-            var n = d.toFixed(0);
+            n = d.toFixed(0);
             sedano=((n*13)+400);
             sedanr=2*((n*10)+400);
             psedano=((n*14)+400);
@@ -56,17 +60,18 @@ function calcRoute() {
             traveller=(2*((n*18)+500));
             
             
-               var nElement = document.createElement("input");
-               nElement.id = "nElement";
-               nElement.style.display = "none";
-               nElement.type = "text";
-               nElement.value = `${n}`;
-               console.log(nElement,nElement.value);
+            //    var nElement = document.createElement("input");
+            //    nElement.id = "nElement";
+            //    nElement.style.display = "none";
+            //    nElement.type = "text";
+            //    nElement.value = `${n}`;
+            //    console.log(nElement,nElement.value);
+            console.log(n);
                var strText8 = document.getElementById("ser").value;
                var returndate = document.getElementById("returndate");
                // strText8="One-Way";
                var oneway = document.getElementById("oneway");
-               oneway.appendChild(nElement);
+            //    oneway.appendChild(nElement);
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
                 twoway.style.display = "none";
