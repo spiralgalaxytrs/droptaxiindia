@@ -133,8 +133,8 @@
             <h4 class="pt-classic-title ab-center">Your booking has been confirmed. Our admin will contact you shortly.
             </h4>
             <ul class="pt-classic-list">
-              <li>Car - Sedan</li>
-              <li>Type - One Way </li>
+              <li id="carType">Car - Sedan</li>
+              <li id="tripType">Type - One Way </li>
 
             </ul>
             <div class="pt-classic-price-outer ab-center">
@@ -218,11 +218,21 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script>
-    console.log("v1.0");
+    console.log("v1.1");
     var price = document.getElementById("3");
+    var ct = document.getElementById("carType");
+    var tt = document.getElementById("tripType");
     var fare = localStorage.getItem("fare");
-    if (fare !== null) {
+    var carType = localStorage.getItem("carType");
+    var tripType = localStorage.getItem("tripType");
+    if (fare !== null || carType != null || tripType != null) {
       price.textContent = fare;
+      ct.textContent = `Car - ${carType}`;
+      tt.textContent = `Type - ${tripType}`;
+    } else {
+      price.textContent = "error - please try again!";
+      ct.textContent = "error - please try again!";
+      tt.textContent = "error - please try again!";
     }
   </script>
 </body>
