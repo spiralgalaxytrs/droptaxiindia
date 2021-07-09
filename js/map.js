@@ -87,6 +87,7 @@ function calcRoute() {
                 $("#8").html(sedanr);
                 $("#9").html(traveller);
                 returndate.style.display = "block";
+                document.getElementById("edName").attributes.required = "required"; 
             }
         
            
