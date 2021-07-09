@@ -56,28 +56,39 @@ function calcRoute() {
             traveller=(2*((n*18)+500));
             
             
+               var nElement = document.createElement("input");
+               nElement.id = "nElement";
+               nElement.style.display = "none";
+               nElement.type = "text";
+               nElement.value = `${n}`;
+               console.log(nElement,nElement.value);
                var strText8 = document.getElementById("ser").value;
+               var returndate = document.getElementById("returndate");
                // strText8="One-Way";
                var oneway = document.getElementById("oneway");
+               oneway.appendChild(nElement);
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
                 twoway.style.display = "none";
                 oneway.style.display = "block";
-                     $(".Dist").html(n);
-                     $("#1").html(psedano);
-                     $("#3").html(psuvo);    
-                     $("#5").html(sedano);     
-                     $("#7").html(suvo);    
+                $(".Dist").html(n);
+                $("#1").html(psedano);
+                $("#3").html(psuvo);    
+                $("#5").html(sedano);     
+                $("#7").html(suvo);    
+                returndate.style.display = "none";
             }
             else{
-               twoway.style.display = "block";
-               oneway.style.display = "none";
+                twoway.style.display = "block";
+                oneway.style.display = "none";
                 $(".Dist").html(2*n);
                 $("#2").html(psedanr);
                 $("#4").html(psuvr);
                 $("#6").html(suvr);
                 $("#8").html(sedanr);
                 $("#9").html(traveller);
+                returndate.style.display = "block";
+                returndate.attributes.required = "required"; 
             }
         
            
