@@ -37,7 +37,8 @@ function book() {
     {rate=psuvr;}
     else if(strText7=="Traveller")
     {rate=traveller;}
-console.log("read successful");
+    console.log("read successful");
+    console.log("book",strText8);
     var result;
     if(strText8=="One-Way"){
         result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
