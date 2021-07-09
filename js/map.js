@@ -62,24 +62,25 @@ function calcRoute() {
                var oneway = document.getElementById("oneway");
                 var twoway = document.getElementById("twoway");
             if(strText8=="One-Way"){
-                returndate.style.display = "none";
                 twoway.style.display = "none";
                 oneway.style.display = "block";
-                     $(".Dist").html(n);
-                     $("#1").html(psedano);
-                     $("#3").html(psuvo);    
-                     $("#5").html(sedano);     
-                     $("#7").html(suvo);    
+                $(".Dist").html(n);
+                $("#1").html(psedano);
+                $("#3").html(psuvo);    
+                $("#5").html(sedano);     
+                $("#7").html(suvo);    
+                returndate.style.display = "none";
             }
             else{
-               twoway.style.display = "block";
-               oneway.style.display = "none";
+                twoway.style.display = "block";
+                oneway.style.display = "none";
                 $(".Dist").html(2*n);
                 $("#2").html(psedanr);
                 $("#4").html(psuvr);
                 $("#6").html(suvr);
                 $("#8").html(sedanr);
                 $("#9").html(traveller);
+                returndate.style.display = "block";
             }
         
            
