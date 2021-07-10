@@ -44,11 +44,11 @@ function book() {
     console.log("book",strText8);
     var result;
     var carTypemsg = strText7[0]=='P'?strText7.replace('P',"Prime "):strText7;
-    if(strText8=="One-Way"){
+     if(strText8=="One-Way"){
         console.log("result set in one way");
-        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + carTypemsg+"%0APrice:"+rate+"%0ATotalKms: "+n;
+        result = 'Hi '+ strText + '%0AThanks for booking with droptaxindia.com' +'%0ABooking Details:  '+ '%0ABooking ID:  ' + CID +  '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + carTypemsg+"%0APrice:"+rate+"%0ATotalKms: "+n + '%0AExtra Km:  15-20/km based on car type' + '%0AToll, State, Parking, %0ALuggage charges extra' + '%0ADriver Batta: 450-600'+ '%0AFor any questions please contact:  99409 80956' ;
     }else{
-        result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate+"%0ATotalKms: "+n;
+        result = 'Hi '+ strText + '%0AThanks for booking with droptaxindia.com' +'%0ABooking Details:  '+ '%0ABooking ID:  ' + CID + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 +'%0ADrop Date:'+ strText9 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate+"%0ATotalKms: "+n + '%0AExtra Km:  15-20/km based on car type' + '%0AToll, State, Parking, %0ALuggage charges extra' + '%0ADriver Batta: 450-600'+ '%0AFor any questions please contact:  99409 80956';
     }
     console.log(result);
     document.getElementById("bookingForm").addEventListener("submit", (e) => {
