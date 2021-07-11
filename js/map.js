@@ -49,6 +49,10 @@ function calcRoute() {
             //Get distance and time            
             var d=result.routes[0].legs[0].distance.value/1000;
             n = d.toFixed(0);
+            if(n<=130)
+            {
+            n=130;
+            }
             sedano=((n*13)+400);
             sedanr=2*((n*10)+400);
             psedano=((n*14)+400);
@@ -58,7 +62,7 @@ function calcRoute() {
             psuvo=((n*19)+400);
             psuvr=2*((n*14)+400);
             traveller=(2*((n*18)+500));
-            
+            n = d.toFixed(0);
             
             //    var nElement = document.createElement("input");
             //    nElement.id = "nElement";
