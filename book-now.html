@@ -122,481 +122,482 @@
 		<div class="row row-50 flex-lg-row-reverse align-items-center">
 				<div class="col-lg-6">
 			<h3>Fill the below form</h3><br/>
-			<form class="rdx-mailform rd-forms" method="post" id="bookingForm">
+			<form class="rd-form rd-mailforxm form-stylex-1" method="post" id="bookingForm">
 
 
 
-        <div id="Location">
-          <div class="row row-x-16 row-20">
 
 
-            <div class="form-wrap">
-
-              <input class="form-input" type="text" id="location-1" name="origin" required
-                placeholder="Pickup Location" required>
-              <label class="form-label" for="pickup-address"></label>
-
-            </div>
-            <div class="form-wrap">
-              <input class="form-input" type="text" id="location-2" name="destination" required
-                placeholder="Drop Location" required>
-              <label class="form-label" for="drop-address"></label>
-
-            </div>
-
-          </div>
-          <br>
-          <div class="form-wrap">
-            <label>Service Type</label>
-            <select id="ser" name="ser" class="form-control">
-              <option value="One-Way">One-Way</option>
-              <option value="Round">Round</option>
-
-            </select>
-            <label class="form-label" for="Service Type"></label>
-          </div>
-
-          <br>
-          <br>
-
-          <button class="button button-block button-secondary mb-2" type="button" onclick="calcRoute();">Check
-            the Rate</button>
-
-        </div>
-        <div id="ma2"></div>
-        <div id="output1"></div>
-        <!--  // /*car select*/-->
+                <div id="Location">
+                  <div class="row row-x-16 row-20">
 
 
-        <div id="ma" style="display: none;">
+                    <div class="form-wrap">
 
+                      <input class="form-input" type="text" id="location-1" name="origin" required
+                        placeholder="Pickup Location" required>
+                      <label class="form-label" for="pickup-address"></label>
 
-          <b>
-            <div id="output" class="result-table"></div>
-          </b>
-          <div class="container-map" id="google-map"></div>
-
-          <button>
-
-
-            <div class="form-wrap">
-              <label>Car Type</label>
-              <select id="cars" name="cars" class="form-control">
-                <option value="Sedan">Sedan</option>
-                <option value="PSedan">Prime Sedan</option>
-                <option value="SUV">SUV</option>
-                <option value="PSUV">Prime SUV</option>
-                <option value="Traveller">Traveller</option>
-              </select>
-              <label class="form-label" for="Car Type"></label>
-            </div>
-
-            <button class="button button-block button-secondary mb-2" onclick="Car()">Next</button>
-
-            <div id="twoway" style="display: none;">
-              <div class="pt-classic-group" id="pt-classic ">
-
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Swift, Zest, Xcent</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
-
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 11/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
-
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="8">6500</span></div>
                     </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
+                    <div class="form-wrap">
+                      <input class="form-input" type="text" id="location-2" name="destination" required
+                        placeholder="Drop Location" required>
+                      <label class="form-label" for="drop-address"></label>
+
                     </div>
+
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('Sedan')"><span class="icon mdi mdi-arrow-right">
-                        Book Now</span></button></div>
-                </article>
+                  <br>
+                  <div class="form-wrap">
+                    <label>Service Type</label>
+                    <select id="ser" name="ser" class="form-control">
+                      <option value="One-Way">One-Way</option>
+                      <option value="Round">Round</option>
 
-
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Only Etios</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
-
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 13/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
-
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="2">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
+                    </select>
+                    <label class="form-label" for="Service Type"></label>
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('PSedan')"><span class="icon mdi mdi-arrow-right">Book
-                        Now</span></button></div>
-                </article>
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Xylo, Ertiga, Marazo</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
 
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 14/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
+                  <br>
+                  <br>
 
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="6">6500</span></div>
+                  <button class="button button-block button-secondary mb-2" type="button" onclick="calcRoute();">Check
+                    the Rate</button>
+
+                </div>
+                <div id="ma2"></div>
+                <div id="output1"></div>
+                <!--  // /*car select*/-->
+
+
+                <div id="ma" style="display: none;">
+
+
+                  <b>
+                    <div id="output" class="result-table"></div>
+                  </b>
+                  <div class="container-map" id="google-map"></div>
+
+
+
+                     <div style="display: none;">
+                    <div class="form-wrap">
+                      <label>Car Type</label>
+                      <select id="cars" name="cars" class="form-control">
+                        <option value="Sedan">Sedan</option>
+                        <option value="PSedan">Prime Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="PSUV">Prime SUV</option>
+                        <option value="Traveller">Traveller</option>
+                      </select>
+                      <label class="form-label" for="Car Type"></label>
                     </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
+
+                    <button class="button button-block button-secondary mb-2" onclick="Car()">Next</button>
                     </div>
+
+                    <div id="twoway" style="display: none;">
+                      <div class="pt-classic-group" id="pt-classic ">
+
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/1.jpg" alt="#"
+                           >
+                          <h4 class="pt-classic-price-value ab-center">Swift, Zest, Xcent</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 11/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="8">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('Sedan')"><span class="icon mdi mdi-arrow-right">
+                                Book Now</span></button></div>
+                        </article>
+
+
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/2.jpg" alt="#"
+                           >
+                          <h4 class="pt-classic-price-value ab-center">Only Etios</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 13/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="2">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('PSedan')"><span class="icon mdi mdi-arrow-right">Book
+                                Now</span></button></div>
+                        </article>
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/3.jpg" alt="#"
+                           >
+                          <h4 class="pt-classic-price-value ab-center">Xylo, Ertiga, Marazo</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 14/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="6">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('SUV')"><span class="icon mdi mdi-arrow-right">Book
+                                Now</span></button></div>
+                        </article>
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/4.jpg" alt="#"
+                           >
+                          <h4 class="pt-classic-price-value ab-center">Only Innova</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 16/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="4">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('PSUV')"><span class="icon mdi mdi-arrow-right">Book
+                                Now</span></button></div>
+                        </article>
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://a1droptaxi.com/img/traveller.png" alt="#"
+                           >
+                          <h4 class="pt-classic-price-value ab-center">Traveller</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 18/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="9">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('Traveller')"><span class="icon mdi mdi-arrow-right">Book
+                                Now</span></button></div>
+                        </article>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div id="oneway" style="display: none;">
+                      <div class="pt-classic-group" id="pt-classic ">
+
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/1.jpg" alt="#"
+                             >
+                          <h4 class="pt-classic-price-value ab-center"> Swift, Zest, Xcent</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 13/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="5">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('Sedan')"><span class="icon mdi mdi-arrow-right"></span>Book
+                              Now</button></div>
+                        </article>
+
+
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/2.jpg" alt="#"
+                             >
+                          <h4 class="pt-classic-price-value ab-center">Only Etios</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 14/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="1">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('PSedan')"><span class="icon mdi mdi-arrow-right"></span>Book
+                              Now</button></div>
+                        </article>
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/3.jpg" alt="#"
+                             >>
+                          <h4 class="pt-classic-price-value ab-center">Xylo, Ertiga, Morazo</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span>KM
+                          </h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 18/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="7">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('SUV')"><span class="icon mdi mdi-arrow-right"></span>Book
+                              Now</button></div>
+                        </article>
+                        <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
+                          <img class="ab-center" src="https://spiralgalaxytrs.github.io/droptaxiindia/images/cars/4.jpg" alt="#"
+                             >
+                          <h4 class="pt-classic-price-value ab-center">Only Innova</h4>
+                          <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
+                          <div class="pt-classic-divider"></div>
+                          <ul class="list-objects-inline">
+                            <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
+                                seater</span></li>
+                            <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
+                                class="imp-bo">Available</span></li>
+
+                          </ul>
+                          <h4 class="pt-classic-title ab-center">Extra Charges</h4>
+                          <ul class="pt-classic-list">
+                            <li>Extra KM - 20/km</li>
+                            <li>Toll and State </li>
+                            <li>Parking & Hill station </li>
+
+                          </ul>
+                          <div class="pt-classic-price-outer ab-center">
+                            <div class="pt-classic-price" aria-hidden="false">
+                              <div class="pt-classic-price-currency">₹ </div>
+                              <div class="pt-classic-price-value"><span id="3">6500</span></div>
+                            </div>
+                            <div class="pt-classic-price" aria-hidden="true">
+                              <div class="pt-classic-price-currency">$</div>
+                              <div class="pt-classic-price-value">470</div>
+                            </div>
+                          </div>
+                          <div class="pt-classic-footer ab-center"><button
+                              class="button button-secondary button-shadow button-icon button-icon-right button-winona "
+                              type="button" onclick="Car('PSUV')"><span class="icon mdi mdi-arrow-right"></span>Book
+                              Now</button></div>
+                        </article>
+
+                      </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div id="Details" style="display:none">
+
+                  <div class="form-wrap">
+                    <label>contact-name</label>
+                    <input class="form-input" id="name" type="text" name="name" placeholder="Your Name" required>
+
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('SUV')"><span class="icon mdi mdi-arrow-right">Book
-                        Now</span></button></div>
-                </article>
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Only Innova</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
 
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 16/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
 
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="4">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
+                  <div class="form-wrap">
+                    <label>contact-phone</label>
+                    <input class="form-input" id="p" type="tel" autocomplete="mobile" name="p"
+                      placeholder="Your Mobile No" required>
+                    <label class="form-label" for="contact-email"></label>
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('PSUV')"><span class="icon mdi mdi-arrow-right">Book
-                        Now</span></button></div>
-                </article>
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Traveller</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
 
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 18/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
 
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="9">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
+                  <div class="form-wrap">
+                    <label>pickup date</label>
+                    <input class="form-input" id="pickupdate" type="date" name="pickupdate"
+                      placeholder="Your pickupdate" required>
+                    <label class="form-label" for="contact-phone"></label>
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('Traveller')"><span class="icon mdi mdi-arrow-right">Book
-                        Now</span></button></div>
-                </article>
-              </div>
-            </div>
 
-
-
-
-
-
-
-
-
-            <div id="oneway" style="display: none;">
-              <div class="pt-classic-group" id="pt-classic ">
-
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center"> Swift, Zest, Xcent</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
-
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 13/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
-
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="5">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
+                  <div id="returndate" class="form-wrap">
+                    <label>return date</label>
+                    <input class="form-input" id="dropdate" type="date" name="dropdate" placeholder="Your return date">
+                    <label class="form-label" for="contact-phone"></label>
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('Sedan')"><span class="icon mdi mdi-arrow-right"></span>Book
-                      Now</button></div>
-                </article>
 
 
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Only Etios</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">4
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
-
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 14/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
-
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="1">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
+                  <div class="pickuptime">
+                    <label>pickup time</label>
+                    <input class="form-input" id="pickuptime" type="time" name="pickupdate" placeholder="." required>
+                    <label class="form-label" for="contact-phone"></label>
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('PSedan')"><span class="icon mdi mdi-arrow-right"></span>Book
-                      Now</button></div>
-                </article>
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Xylo, Ertiga, Morazo</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span>KM
-                  </h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
 
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 18/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
 
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="7">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
+
+
+                  <br>
+
+                  <div class="form-wrap form-button">
+                    <button class="button button-block button-secondary" onclick="book()">Book Now</button>
                   </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('SUV')"><span class="icon mdi mdi-arrow-right"></span>Book
-                      Now</button></div>
-                </article>
-                <article class="pt-classic wow slideInRightLg  my-5 " data-wow-delay=".5s">
-                  <img class="ab-center" src="https://image.flaticon.com/icons/png/512/683/683088.png" alt="#"
-                    style="height: 100px; width: 100px; ">
-                  <h4 class="pt-classic-title ab-center">Only Innova</h4>
-                  <h4 class="pt-classic-price-value ab-center">Distance - <span class="Dist">506 km</span></h4>
-                  <div class="pt-classic-divider"></div>
-                  <ul class="list-objects-inline">
-                    <li><span class="icon text-primary mdi mdi-seat-recline-extra"></span><span class="imp-bo">7
-                        seater</span></li>
-                    <li><span class="icon text-primary mdi mdi-air-conditioner"></span><span
-                        class="imp-bo">Available</span></li>
 
-                  </ul>
-                  <h4 class="pt-classic-title ab-center">Extra Charges</h4>
-                  <ul class="pt-classic-list">
-                    <li>Extra KM - 20/km</li>
-                    <li>Toll and State </li>
-                    <li>Parking & Hill station </li>
+                </div>
 
-                  </ul>
-                  <div class="pt-classic-price-outer ab-center">
-                    <div class="pt-classic-price" aria-hidden="false">
-                      <div class="pt-classic-price-currency">₹ </div>
-                      <div class="pt-classic-price-value"><span id="3">6500</span></div>
-                    </div>
-                    <div class="pt-classic-price" aria-hidden="true">
-                      <div class="pt-classic-price-currency">$</div>
-                      <div class="pt-classic-price-value">470</div>
-                    </div>
-                  </div>
-                  <div class="pt-classic-footer ab-center"><button
-                      class="button button-secondary button-shadow button-icon button-icon-right button-winona "
-                      type="button" onclick="Car('PSUV')"><span class="icon mdi mdi-arrow-right"></span>Book
-                      Now</button></div>
-                </article>
-
-              </div>
-            </div>
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div id="Details" style="display:none">
-
-          <div class="form-wrap">
-            <label>contact-name</label>
-            <input class="form-input" id="name" type="text" name="name" placeholder="Your Name" required>
-
-          </div>
-
-
-          <div class="form-wrap">
-            <label>contact-phone</label>
-            <input class="form-input" id="p" type="tel" autocomplete="mobile" name="p"
-              placeholder="Your Mobile No" required>
-            <label class="form-label" for="contact-email"></label>
-          </div>
-
-
-          <div class="form-wrap">
-            <label>pickup date</label>
-            <input class="form-input" id="pickupdate" type="date" name="pickupdate"
-              placeholder="Your pickupdate" required>
-            <label class="form-label" for="contact-phone"></label>
-          </div>
-
-          <div class="form-wrap">
-            <label>return date</label>
-            <input class="form-input" id="dropdate" type="date" name="dropdate" placeholder="Your return date"
-              required>
-            <label class="form-label" for="contact-phone"></label>
-          </div>
-
-
-          <div class="pickuptime">
-            <label>pickupdate</label>
-            <input class="form-input" id="pickuptime" type="time" name="pickupdate" placeholder="." required>
-            <label class="form-label" for="contact-phone"></label>
-          </div>
-
-
-
-
-          <br>
-
-          <div class="form-wrap form-button">
-            <button class="button button-block button-secondary" onclick="book()">Book Now</button>
-          </div>
-
-        </div>
-
-      </form>
-
+              </form>
     </div>
   </div>
 </div>
