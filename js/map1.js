@@ -137,11 +137,11 @@ function clearRoute(){
     
 }
 
-// Create autocomplete objects for all inputs
-
+//autocomplete only for cities in india
 var options = {
-    types: ['(india)']
-}
+ types: ['(cities)'],
+ componentRestrictions: {country: "in"}
+};
 
 
 var input1 = document.getElementById("location-1");
