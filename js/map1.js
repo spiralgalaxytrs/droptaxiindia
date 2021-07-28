@@ -137,15 +137,15 @@ function clearRoute(){
     
 }
 
-// Create autocomplete objects for all inputs
-
+//autocomplete only for cities in india
 var options = {
-    types: ['(india)']
-}
+ types: ['(cities)'],
+ componentRestrictions: {country: "in"}
+};
 
 
 var input1 = document.getElementById("location-1");
-var autocomplete1 = new google.maps.places.Autocomplete(input1);
+var autocomplete1 = new google.maps.places.Autocomplete(input1,options);
 
 var input2 = document.getElementById("location-2");
-var autocomplete2 = new google.maps.places.Autocomplete(input2);
+var autocomplete2 = new google.maps.places.Autocomplete(input2,options);
